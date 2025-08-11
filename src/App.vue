@@ -75,7 +75,6 @@ export default {
 </script>
 
 <style>
-.container { width: 400px; margin: auto; }
-input, select { display: block; margin-bottom: 10px; width: 100%; padding: 5px; }
-button { margin-right: 5px; }
+@import "@/assets/style.css";
 </style>
+
