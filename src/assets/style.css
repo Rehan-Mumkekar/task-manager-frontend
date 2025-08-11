@@ -1,56 +1,57 @@
-/* General page styling */
 body {
-  font-family: Arial, sans-serif;
-  background: #f4f6f8;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(120deg, #6a11cb, #2575fc);
+  color: #fff;
   margin: 0;
   padding: 0;
 }
 
-/* Container */
 .container {
-  max-width: 700px;
+  max-width: 600px;
   margin: 50px auto;
-  background: #fff;
+  background: rgba(255, 255, 255, 0.1);
   padding: 25px;
-  border-radius: 10px;
-  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
-/* Heading */
 h1 {
   text-align: center;
-  color: #333;
+  font-size: 2.5rem;
   margin-bottom: 20px;
 }
 
-/* Form styling */
 form {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 10px;
 }
 
-form input, form select {
-  flex: 1;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-form button {
-  background: #4cafef;
-  color: white;
+input, select, button {
+  padding: 12px;
   border: none;
-  padding: 10px 15px;
-  border-radius: 5px;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+input, select {
+  outline: none;
+  background: rgba(255, 255, 255, 0.9);
+  color: #333;
+}
+
+button {
+  background: #ff9800;
+  color: #fff;
   cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
 }
 
-form button:hover {
-  background: #379cd6;
+button:hover {
+  background: #e68900;
 }
 
-/* Task list */
 ul {
   list-style: none;
   padding: 0;
@@ -58,50 +59,42 @@ ul {
 }
 
 li {
-  background: #f9f9f9;
-  margin-bottom: 10px;
+  background: rgba(255, 255, 255, 0.15);
   padding: 12px;
-  border-radius: 6px;
+  border-radius: 8px;
+  margin-bottom: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 li strong {
-  color: #333;
+  font-size: 1.1rem;
 }
 
-/* Buttons inside tasks */
 li button {
   background: #ff4d4d;
-  color: white;
-  border: none;
-  padding: 5px 10px;
-  margin-left: 5px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-li button:first-of-type {
-  background: #ffc107;
-}
-
-li button:first-of-type:hover {
-  background: #e0a800;
+  padding: 8px 12px;
+  border-radius: 6px;
 }
 
 li button:hover {
-  opacity: 0.9;
+  background: #cc0000;
 }
 
-/* Edit form */
-div[ v-if="editing" ] {
+h3 {
   margin-top: 20px;
-  padding: 15px;
-  background: #eef5ff;
-  border-radius: 8px;
+  font-size: 1.5rem;
 }
 
-div[ v-if="editing" ] h3 {
+.edit-section input, .edit-section select {
   margin-bottom: 10px;
+}
+
+.edit-section button {
+  background: #4caf50;
+}
+
+.edit-section button:hover {
+  background: #3d8b40;
 }
